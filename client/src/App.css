@@ -1,0 +1,120 @@
+html, body, #root, main {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #A5D0A8;
+}
+
+.Card-Header {
+  background-color: #246A73;
+  color: white;
+}
+
+.Card-Body {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #A5D0A8;
+  color: black;
+  padding-top: 10px;
+}
+
+/* User record list */
+.userRecordListContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+}
+
+.userRecordCard {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border: 3px solid #246A73;
+  border-radius: 12px;
+  max-width: 90%;
+}
+
+.userRecordCard h1 {
+  margin-bottom: 2px;
+}
+
+.userRecordCard dl {
+  margin-top: 2px;
+}
+
+.userRecordCard dt {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.userRecordCard dd {
+  margin: 0;
+  padding: 0 0 0.5em 0;
+}
+
+.complete {
+  text-decoration: line-through;
+  background-color: #246A73;
+}
+
+/* Form */
+input {
+  width: 75%;
+  min-width: 100px;
+  max-width: 500px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/** Form Edit Modal **/
+.editModalContent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  vertical-align: center;
+  justify-content: center;
+}
+
+.EditForm .form-container {
+  height: 100%;
+}
+
+.EditForm button.UserSubmit {
+  min-width: 100px;
+}
+
+.editModalContent button.closeEditModal {
+  background-color: #FF8585;
+  border: none;
+  padding: 6px 10px;
+  min-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}

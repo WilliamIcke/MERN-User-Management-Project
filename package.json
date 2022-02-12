@@ -1,0 +1,26 @@
+{
+  "name": "technical-test-project-flown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.7",
+    "mongoose-data-seed": "^2.1.6",
+    "react-modal": "^3.14.4"
+  },
+  "scripts": {
+    "first-run-install": "npm install && cd client && npm install",
+    "start": "node server/index.js",
+    "build-client": "cd client && npm install && npm run build",
+    "start-client": "cd client && npm start"
+  },
+  "mdSeed": {
+    "seedersFolder": "./server/seeders"
+  }
+}
