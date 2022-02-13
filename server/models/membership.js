@@ -20,4 +20,6 @@ const membershipSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-module.exports = mongoose.model('membership', membershipSchema);
+const Membership = mongoose.model('Membership', membershipSchema)
+
+module.exports = {Membership};

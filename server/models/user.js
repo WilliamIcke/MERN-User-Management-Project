@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+var Schema = mongoose.Schema;
 
 /**
  * firstname: Type String and required, is the firstname of the user
@@ -9,7 +10,7 @@ const mongoose = require("mongoose");
  * active: Type boolean and required, used to determine if user is active
  * @type {mongoose.Schema}
  */
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
     firstname: {
         type: String,
         required: true
@@ -23,7 +24,8 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     membership: {
-        type: Integer,
+        type: Schema.Types.ObjectId,
+        ref: 'Membership',
         required: false
     },
     membershipStart: {
@@ -36,4 +38,6 @@ const userSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-module.exports = mongoose.model('user', userSchema);
+const User = mongoose.model('User', userSchema);
+
+module.exports = {User};

@@ -5,7 +5,7 @@ import Modal from "react-modal";
 
 Modal.setAppElement("#root");
 
-const UserRecord = ({ userRecord, updateUserRecordStatus, updateUserRecordItem, deleteUserRecord }) => {
+const UserRecord = ({ userRecord, membershipRecords, updateUserRecordItem, deleteUserRecord }) => {
     const [isOpen, setIsOpen] = React.useState(false);
 
     /* If a date is set, convert it to a nice format */
@@ -36,7 +36,7 @@ const UserRecord = ({ userRecord, updateUserRecordStatus, updateUserRecordItem, 
                 <dt>Date of birth</dt>
                 <dd>{betterDateOfBirthFormat}</dd>
                 <dt>Membership</dt>
-                <dd>{userRecord.membership}</dd>
+                <dd>{userRecord.membership.membershipName}</dd>
                 <dt>Membership start date</dt>
                 <dd>{betterMembershipStartFormat}</dd>
             </dl>
@@ -48,14 +48,10 @@ const UserRecord = ({ userRecord, updateUserRecordStatus, updateUserRecordItem, 
                     contentLabel="editContent"
                 >
                     <div className='editModalContent'>
-                        <EditUserRecord userRecord={userRecord} updateUserRecord={updateUserRecord}/>
+                        <EditUserRecord userRecord={userRecord} membershipRecords={membershipRecords} updateUserRecordItem={updateUserRecordItem}/>
                         <button className="closeEditModal" onClick={toggleModal}>Close</button>
                     </div>
                 </Modal>
-
-                <button onClick={() => deleteUserRecord(userRecord._id)}>
-                    Delete User
-                </button>
             </div>
         </div>
     )

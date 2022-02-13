@@ -2,7 +2,7 @@ import React from 'react'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const EditUserRecord = ({ userRecord, updateUserRecord }) => {
+const EditUserRecord = ({ userRecord, membershipRecords, updateUserRecord }) => {
     const [formData, setFormData] = React.useState(userRecord);
     const [disableForm, setDisableForm] = React.useState(false);
     const [validationMessage, setWordValidationMessage] = React.useState('');
@@ -18,7 +18,7 @@ const EditUserRecord = ({ userRecord, updateUserRecord }) => {
      }
     const [dateOfBirth, setDate] = React.useState(initialDateValue);
 
-    useEffect(() => {
+    React.useEffect(() => {
         // State changes, check valid data
         switch (true) {
             case (formData === undefined): // Check if value empty                    
@@ -26,7 +26,7 @@ const EditUserRecord = ({ userRecord, updateUserRecord }) => {
                 break;
           case (formData.firstname.trim().length === 0): // Check if word is atleast 5 chars in length
                 setDisableForm(true);
-                setWordInvalidMessage("Firstname is required");
+                setWordValidationMessage("Firstname is required");
                 break;
           default:
               setWordValidationMessage('');

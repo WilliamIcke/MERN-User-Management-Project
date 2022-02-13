@@ -1,27 +1,28 @@
 import React from "react";
 import logo from './logo.svg';
-import AddUserRecord from './components/AddUserRecord'
 import UserRecord from './components/UserRecord'
 import './App.css';
-import { getUserRecords, getMembershipRecords, addUserRecord, updateUserRecord, deleteUserRecord } from './API'
+import { getUserRecords, getMembershipRecords, updateUserRecord } from './API'
 
 const App = () => {
   const [userRecords, setUserRecords] = React.useState([]);
   const [membershipRecords, setMembershipRecords] = React.useState([]);
 
    React.useEffect(() => {
-   }, [userRecords,membershipRecords])
+    fetchUserRecords();
+    fetchMembershipRecords();
+   }, [])
 
     /* Definitions of calls that use the API */
     const fetchUserRecords = () => {
         getUserRecords()
-            .then(({ data: { userRecords } }) => setUserRecords (userRecords))
+            .then(({ data: { userRecords } }) => setUserRecords(userRecords))
             .catch((err) => console.log(err))
     }
 
     const fetchMembershipRecords = () => {
         getMembershipRecords()
-            .then(({ data: { membershipRecords } }) => setMembershipRecords (membershipRecords))
+            .then(({ data: { membershipRecords } }) => setMembershipRecords(membershipRecords))
             .catch((err) => console.log(err))
     }
 
@@ -47,6 +48,7 @@ const App = () => {
                 <UserRecord
                     key={userRecord._id}
                     userRecord={userRecord}
+                    membershipRecords={membershipRecords}
                     updateUserRecord={handleUpdateUserRecord}
                 />
             ))}

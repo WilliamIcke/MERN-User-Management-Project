@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
-import Memberships from './server/seeders/membership.seeder';
-import Users from './server/seeders/users.seeder';
+const mongoose = require('mongoose');
+const Memberships = require('./server/seeders/memberships.seeder');
+const Users = require('./server/seeders/users.seeder');
 
 const mongoURL = 'mongodb://127.0.0.1:27017/technical-test-flown';
 
@@ -9,7 +9,7 @@ const mongoURL = 'mongodb://127.0.0.1:27017/technical-test-flown';
  * order is important
  * @type {Object}
  */
-export const seedersList = {
+const seedersList = {
   Memberships,
   Users
 };
@@ -17,10 +17,12 @@ export const seedersList = {
  * Connect to mongodb implementation
  * @return {Promise}
  */
-export const connect = async () =>
-  await mongoose.connect(mongoURL, { useNewUrlParser: true });
+const connect = async () =>
+  mongoose.connect(mongoURL, { useNewUrlParser: true });
 /**
  * Drop/Clear the database implementation
  * @return {Promise}
  */
-export const dropdb = async () => mongoose.connection.db.dropDatabase();
+const dropdb = async () => mongoose.connection.db.dropDatabase();
+
+module.exports = {seedersList, connect, dropdb};

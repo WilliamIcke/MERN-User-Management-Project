@@ -1,4 +1,4 @@
-const user = require('../models/user');
+const {User} = require('../models/user');
 
 /**
  * This returns all the users currently stored
@@ -8,7 +8,10 @@ const user = require('../models/user');
  */
 const getUserRecords = async (req, res) => {
     try {
-        const userRecords = await user.find();
+        const userRecords = await User.find().populate({
+            path: 'membership',
+            select: 'membershipName cost active',
+        });
         res.status(200).json({ userRecords });
     } catch (error) {
         throw error
@@ -24,8 +27,8 @@ const getUserRecords = async (req, res) => {
 const updateUserRecord = async (req, res) => {
     try {
         const { params: { id }, body, } = req;
-        const updateUserRecord = await user.findByIdAndUpdate({ _id: id }, body);
-        const allUserRecords = await user.find();
+        const updateUserRecord = await User.findByIdAndUpdate({ _id: id }, body);
+        const allUserRecords = await User.find().populate('membershipName');
         res.status(200).json({
             message: 'User record updated',
             userRecord: updateUserRecord,
