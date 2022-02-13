@@ -5,7 +5,7 @@ import Modal from "react-modal";
 
 Modal.setAppElement("#root");
 
-const UserRecord = ({ userRecord, membershipRecords, updateUserRecordItem, deleteUserRecord }) => {
+const UserRecord = ({ userRecord, membershipRecords, updateUserRecord }) => {
     const [isOpen, setIsOpen] = React.useState(false);
 
     /* If a date is set, convert it to a nice format */
@@ -41,14 +41,18 @@ const UserRecord = ({ userRecord, membershipRecords, updateUserRecordItem, delet
                 <dd>{betterMembershipStartFormat}</dd>
             </dl>
             <div className='Card-Actions'>
-                <button onClick={toggleModal}>Edit User</button>
+                <button className='editUserButton' onClick={toggleModal}>Edit User</button>
                 <Modal
                     isOpen={isOpen}
                     onRequestClose={toggleModal}
                     contentLabel="editContent"
                 >
                     <div className='editModalContent'>
-                        <EditUserRecord userRecord={userRecord} membershipRecords={membershipRecords} updateUserRecordItem={updateUserRecordItem}/>
+                        <EditUserRecord
+                            userRecord={userRecord}
+                            membershipRecords={membershipRecords}
+                            updateUserRecord={updateUserRecord}
+                        />
                         <button className="closeEditModal" onClick={toggleModal}>Close</button>
                     </div>
                 </Modal>
