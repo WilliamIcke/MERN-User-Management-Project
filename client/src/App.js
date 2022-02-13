@@ -1,6 +1,6 @@
 import React from "react";
 import logo from './logo.svg';
-import UserRecord from './components/UserRecord'
+import UserRecord from './components/UserRecord';
 import './App.css';
 import { getUserRecords, getMembershipRecords, updateUserRecord } from './API'
 
@@ -42,6 +42,19 @@ const App = () => {
         <div className='Card-Header'>
             <h1>Technical test - William Icke</h1>
             <h2>User management system</h2>
+            <div className="statisticsListCard">
+                <h3>Membership statistics</h3>
+                {membershipRecords.map((membershipRecord) => (
+                    <div key={membershipRecord._id} className="statisticsCard">
+                        <h4 className="statsMembershipName">
+                            {membershipRecord.membershipName}
+                        </h4>
+                        <div className="statsMembershipCount">
+                            {userRecords.filter((userRecord => userRecord.membership.membershipName == membershipRecord.membershipName)).length}
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
         <div className='Card-Body userRecordListContainer'>
             {userRecords.map((userRecord) => (
