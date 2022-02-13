@@ -3,6 +3,11 @@ const { Membership } = require('../models/membership');
 
 const data = [
   {
+    membershipName: 'No Membership',
+    cost: '0',
+    active: true
+  },
+  {
     membershipName: 'Priority Membership',
     cost: '250',
     active: true

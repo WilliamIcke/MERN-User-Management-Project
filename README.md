@@ -75,3 +75,4 @@ Drops the database before seeding
     - Membership subscription options like monthly, yearly. Currently runs until cancelled manually
     - Different user list views and sorting
     - Containerise with docker
+    - Cypress for integration tests

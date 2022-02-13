@@ -86,8 +86,7 @@ const EditUserRecord = ({ userRecord, membershipRecords, updateUserRecord }) => 
                         <label htmlFor='membership'>Membership plan</label>
                     </div>
                     <div>
-                        <select onChange={handleMembershipChange} id='membership' value={formData.membership._id}>    
-                            <option key="Null" value="">No Membership</option>
+                        <select onChange={handleMembershipChange} id='membership' value={formData.membership._id}>
                             {membershipRecords.map((membershipRecord) => (
                                 <option key={membershipRecord._id} value={membershipRecord._id}>
                                     {membershipRecord.membershipName}: £{membershipRecord.cost}

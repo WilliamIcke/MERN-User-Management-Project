@@ -3,7 +3,9 @@ import { format } from 'date-fns';
 import EditUserRecord from './EditUserRecord';
 import Modal from "react-modal";
 
-Modal.setAppElement("#root");
+if (process.env.NODE_ENV !== 'test') {
+    Modal.setAppElement("#root");
+}
 
 const UserRecord = ({ userRecord, membershipRecords, updateUserRecord }) => {
     const [isOpen, setIsOpen] = React.useState(false);
