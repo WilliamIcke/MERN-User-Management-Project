@@ -25,6 +25,7 @@ const UserRecord = ({ userRecord, membershipRecords, updateUserRecord }) => {
 
     /* Simple function to help with the Edit To Do modal */
     function toggleModal() {
+        console.log('Edit user modal triggered')
         setIsOpen(!isOpen);
     }
 

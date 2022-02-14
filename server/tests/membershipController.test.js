@@ -1,13 +1,12 @@
-beforeEach(() => {
-    //Insert test data?
-});
+// beforeEach(() => {
+//     //Insert test data
+// });
 
-AfterEach(() => {
-    // Cleanse db
-});
+// AfterEach(() => {
+//     // Cleanse db
+// });
 
-describe('Membership controller tests', () => {
-    it('getMembershipRecords', async done => {
-        //Check getMembershipRecords works correctly
-    })
-})
+// describe('Membership controller tests', () => {
+//     it('getMembershipRecords, should return unaltered test data', async done => {
+//     })
+// })

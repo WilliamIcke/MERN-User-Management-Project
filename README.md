@@ -51,9 +51,13 @@ Accessible to view on the local host here: [http://localhost:3000](http://localh
 
 Installs the server and client dependencies, only needs to be run once on initial setup.
 
+### `npm run test-client`
+
+Runs the client side tests.
+
 ### `npm test`
 
-Runs the available tests.
+Runs the server tests, will currently fail (Currently unfinished, but initial testing plan written in relevant files).
 
 ### `md-seed run`
 
@@ -75,4 +79,4 @@ Drops the database before seeding
     - Membership subscription options like monthly, yearly. Currently runs until cancelled manually
     - Different user list views and sorting
     - Containerise with docker
-    - Cypress for integration tests
+    - Cypress for integration tests and user stories

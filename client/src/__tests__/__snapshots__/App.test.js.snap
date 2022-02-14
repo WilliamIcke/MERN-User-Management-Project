@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component render snapshot test (debug) Check render app component 1`] = `
+<main
+  class="App"
+>
+  <div
+    class="Card-Header"
+  >
+    <h1>
+      Technical test - William Icke
+    </h1>
+    <h2>
+      User management system
+    </h2>
+    <div
+      class="statisticsListCard"
+    >
+      <h3>
+        Membership statistics
+      </h3>
+    </div>
+  </div>
+  <div
+    class="Card-Body userRecordListContainer"
+  />
+</main>
+`;
+
+exports[`Component shallow snapshot tests (debug) Check App component, only 1`] = `
+<main
+  className="App"
+>
+  <div
+    className="Card-Header"
+  >
+    <h1>
+      Technical test - William Icke
+    </h1>
+    <h2>
+      User management system
+    </h2>
+    <div
+      className="statisticsListCard"
+    >
+      <h3>
+        Membership statistics
+      </h3>
+    </div>
+  </div>
+  <div
+    className="Card-Body userRecordListContainer"
+  />
+</main>
+`;

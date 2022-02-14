@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component shallow snapshot tests (debug) Check UserRecord component, only 1`] = `
+<div
+  className="userRecordCard"
+>
+  <dl>
+    <dt>
+      Firstname
+    </dt>
+    <dd>
+      Test
+    </dd>
+    <dt>
+      Surname
+    </dt>
+    <dd>
+      Tester
+    </dd>
+    <dt>
+      Date of birth
+    </dt>
+    <dd>
+      12/12/1990
+    </dd>
+    <dt>
+      Membership
+    </dt>
+    <dd />
+    <dt>
+      Membership start date
+    </dt>
+    <dd>
+      07/12/2018
+    </dd>
+  </dl>
+  <div
+    className="Card-Actions"
+  >
+    <button
+      className="editUserButton"
+      onClick={[Function]}
+    >
+      Edit User
+    </button>
+    <Modal
+      ariaHideApp={true}
+      bodyOpenClassName="ReactModal__Body--open"
+      closeTimeoutMS={0}
+      contentElement={[Function]}
+      contentLabel="editContent"
+      isOpen={false}
+      onRequestClose={[Function]}
+      overlayElement={[Function]}
+      parentSelector={[Function]}
+      portalClassName="ReactModalPortal"
+      preventScroll={false}
+      role="dialog"
+      shouldCloseOnEsc={true}
+      shouldCloseOnOverlayClick={true}
+      shouldFocusAfterRender={true}
+      shouldReturnFocusAfterClose={true}
+    >
+      <div
+        className="editModalContent"
+      >
+        <EditUserRecord
+          membershipRecords={
+            Array [
+              Object {
+                "_id": 1,
+                "active": true,
+                "cost": "0",
+                "membershipName": "No Membership",
+              },
+              Object {
+                "_id": 2,
+                "active": true,
+                "cost": "250",
+                "membershipName": "Priority Membership",
+              },
+              Object {
+                "_id": 3,
+                "active": true,
+                "cost": "500",
+                "membershipName": "VIP Membership",
+              },
+              Object {
+                "_id": 4,
+                "active": true,
+                "cost": "120",
+                "membershipName": "Tier 1 Membership",
+              },
+              Object {
+                "_id": 5,
+                "active": true,
+                "cost": "50",
+                "membershipName": "Basic Membership",
+              },
+            ]
+          }
+          userRecord={
+            Object {
+              "_id": 1,
+              "active": true,
+              "dateOfBirth": "12/12/1990",
+              "firstname": "Test",
+              "membership": 1,
+              "membershipStart": "12/07/2018",
+              "surname": "Tester",
+            }
+          }
+        />
+        <button
+          className="closeEditModal"
+          onClick={[Function]}
+        >
+          Close
+        </button>
+      </div>
+    </Modal>
+  </div>
+</div>
+`;

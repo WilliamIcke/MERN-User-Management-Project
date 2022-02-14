@@ -95,8 +95,8 @@ const EditUserRecord = ({ userRecord, membershipRecords, updateUserRecord }) => 
                         </select>
                     </div>
                 </div>
-                <p className="validationMessage"  data-testid="validation-message">{validationMessage}</p>
-                <button className="userSubmit" disabled={disableForm} >Update User Record</button>
+                <p className="validationMessage"  id="validation-message">{validationMessage}</p>
+                <button className="userSubmit" id ="userSubmitButton" disabled={disableForm} >Update User Record</button>
             </div>
         </form>
     )

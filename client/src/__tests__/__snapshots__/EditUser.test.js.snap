@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component shallow snapshot tests (debug) Check EditUserRecord component, only 1`] = `
+<form
+  autoComplete="off"
+  className="EditForm"
+  onSubmit={[Function]}
+>
+  <div
+    className="form-container"
+  >
+    <div
+      className="row"
+    >
+      <div>
+        <label
+          htmlFor="firstname"
+        >
+          Firstname
+        </label>
+      </div>
+      <div>
+        <input
+          id="firstname"
+          onChange={[Function]}
+          type="text"
+          value="Test"
+        />
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div>
+        <label
+          htmlFor="surname"
+        >
+          Surname
+        </label>
+      </div>
+      <div>
+        <input
+          id="surname"
+          onChange={[Function]}
+          type="text"
+          value="Tester"
+        />
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div>
+        <label
+          htmlFor="dateOfBirth"
+        >
+          Date of birth
+        </label>
+      </div>
+      <div>
+        <r
+          allowSameDay={false}
+          customTimeInput={null}
+          dateFormat="dd-MM-yyyy"
+          dateFormatCalendar="LLLL yyyy"
+          disabled={false}
+          disabledKeyboardNavigation={false}
+          dropdownMode="scroll"
+          enableTabLoop={true}
+          excludeScrollbar={true}
+          focusSelectedMonth={false}
+          id="dateOfBirth"
+          monthsShown={1}
+          nextMonthAriaLabel="Next Month"
+          nextMonthButtonLabel="Next Month"
+          nextYearAriaLabel="Next Year"
+          nextYearButtonLabel="Next Year"
+          onBlur={[Function]}
+          onCalendarClose={[Function]}
+          onCalendarOpen={[Function]}
+          onChange={[Function]}
+          onClickOutside={[Function]}
+          onFocus={[Function]}
+          onInputClick={[Function]}
+          onInputError={[Function]}
+          onKeyDown={[Function]}
+          onMonthChange={[Function]}
+          onSelect={[Function]}
+          onYearChange={[Function]}
+          popperPlacement="bottom"
+          preventOpenOnFocus={false}
+          previousMonthAriaLabel="Previous Month"
+          previousMonthButtonLabel="Previous Month"
+          previousYearAriaLabel="Previous Year"
+          previousYearButtonLabel="Previous Year"
+          readOnly={false}
+          renderDayContents={[Function]}
+          selected={1990-12-12T00:00:00.000Z}
+          selectsDisabledDaysInRange={false}
+          shouldCloseOnSelect={true}
+          showFourColumnMonthYearPicker={false}
+          showFullMonthYearPicker={false}
+          showMonthYearPicker={false}
+          showPopperArrow={true}
+          showPreviousMonths={false}
+          showQuarterYearPicker={false}
+          showTimeInput={false}
+          showTimeSelect={false}
+          showTwoColumnMonthYearPicker={false}
+          showYearPicker={false}
+          strictParsing={false}
+          timeCaption="Time"
+          timeInputLabel="Time"
+          timeIntervals={30}
+          withPortal={false}
+          yearItemNumber={12}
+        />
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div>
+        <label
+          htmlFor="membership"
+        >
+          Membership plan
+        </label>
+      </div>
+      <div>
+        <select
+          id="membership"
+          onChange={[Function]}
+        >
+          <option
+            key="1"
+            value={1}
+          >
+            No Membership
+            : £
+            0
+          </option>
+          <option
+            key="2"
+            value={2}
+          >
+            Priority Membership
+            : £
+            250
+          </option>
+          <option
+            key="3"
+            value={3}
+          >
+            VIP Membership
+            : £
+            500
+          </option>
+          <option
+            key="4"
+            value={4}
+          >
+            Tier 1 Membership
+            : £
+            120
+          </option>
+          <option
+            key="5"
+            value={5}
+          >
+            Basic Membership
+            : £
+            50
+          </option>
+        </select>
+      </div>
+    </div>
+    <p
+      className="validationMessage"
+      id="validation-message"
+    />
+    <button
+      className="userSubmit"
+      disabled={false}
+      id="userSubmitButton"
+    >
+      Update User Record
+    </button>
+  </div>
+</form>
+`;
