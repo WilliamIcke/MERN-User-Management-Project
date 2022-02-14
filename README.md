@@ -13,26 +13,25 @@ Should be as simple as following this, specifically the steps under "Installing 
 
 Note that the last step "Connect to MongoDB using the Mongo shell" is not required, we only need the mongodb daemon to be running
 
-### Commands for the application itself
+## Commands for the application itself
 
 Please note this requires npm (Can be done as part of NodeJS installation).
 
-#### In the first terminal:  
-'npm run first-run-install' - Installs all dependencies (Only needs to be run once during initial setup) 
+### In the first terminal:  
+`npm run first-run-install` - Installs all dependencies (Only needs to be run once during initial setup) 
 
-##### Seeding the database
+Run the db seeders using:  
+`md-seed run`
+
 I am using the library 'mongoose-data-seed' to handle the seeding.
 (For me the terminal complained about not recognising 'md-seed', fixed by installing it globally : 'npm install -g mongoose-data-seed')
 
-Run these seeders using:
-'md-seed run'
+Then start up the backend server  
+`npm start` - Starts the server
 
-##### The start up the backend server
-'npm start' - Starts the server  
-
-#### Then in another terminal:  
-'npm run start-client' - Starts the frontend on http://localhost:3000/, accessible via browser (Should auto-open)
-
+### Then in another terminal: 
+`npm run start-client` - Starts the frontend on http://localhost:3000/, accessible via browser (Should auto-open)
+ 
 ## Available Scripts
 
 Execute the below scripts from the root ("Technical test flown project/"):
