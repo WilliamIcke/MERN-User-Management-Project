@@ -10,41 +10,37 @@ const EditUserRecord = ({ userRecord, membershipRecords, updateUserRecord }) => 
 
     React.useEffect(() => {
         // State changes, check valid data
-        switch (true) {
-            case (formData === undefined): // Check if value empty                    
-                setDisableForm(true);
-                break;
-          case (formData.firstname.trim().length === 0): // Check if firstname is empty
-                setDisableForm(true);
-                setWordValidationMessage("Firstname is required");
-                break;
-          case (formData.surname.trim().length === 0): // Check if surname is empty
-                  setDisableForm(true);
-                  setWordValidationMessage("Surname is required");
-                  break;
-          case (formData.dateOfBirth === undefined || formData.dateOfBirth === null): // Check if DOB is set
-                  setDisableForm(true);
-                  setWordValidationMessage("Date of birth is required");
-                break;
-          default:
-              setWordValidationMessage('');
-              setDisableForm(false);
+        if (!formData) {
+            setDisableForm(true);
+        } else if (formData.firstname.trim().length === 0) {
+            setDisableForm(true);
+            setWordValidationMessage("Firstname is required");
+        } else if (formData.surname.trim().length === 0) {
+            setDisableForm(true);
+            setWordValidationMessage("Surname is required");
+        } else if (formData.dateOfBirth === undefined || formData.dateOfBirth === null) {
+            setDisableForm(true);
+            setWordValidationMessage("Date of birth is required");
+        } else {
+            setWordValidationMessage('');
+            setDisableForm(false);
         }
     }, [formData, disableForm, dateOfBirth]);
 
     /* Updates form data with any input changes */
     const handleForm = (e) => {
-        setFormData(Object.assign(Object.assign({}, formData), { [e.currentTarget.id]: e.currentTarget.value }));
+        setFormData({...formData, [e.currentTarget.id]: e.currentTarget.value});
     };
 
     /* Updates form data and datepicker field with date changes */
     const handleDateChange = (dateChange) => {
-        setFormData(Object.assign(Object.assign({}, formData), { dateOfBirth: dateChange }));
+        setFormData({...formData, dateOfBirth: dateChange});
         setDate(dateChange);
     };
 
     /* Updates membership changes */
     const handleMembershipChange = (e) => {
+        setFormData({...formData, [e.currentTarget.id]: e.currentTarget.value, 'membershipStart': new Date() });
         setFormData(Object.assign(Object.assign({}, formData), { [e.currentTarget.id]: e.currentTarget.value }, { 'membershipStart': new Date() }));
     };
 

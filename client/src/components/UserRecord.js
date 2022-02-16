@@ -10,18 +10,8 @@ if (process.env.NODE_ENV !== 'test') {
 const UserRecord = ({ userRecord, membershipRecords, updateUserRecord }) => {
     const [isOpen, setIsOpen] = React.useState(false);
 
-    /* If a date is set, convert it to a nice format */
-    let betterDateOfBirthFormat = "NA";
-    if ('dateOfBirth' in userRecord && userRecord.dateOfBirth !== null) {
-        betterDateOfBirthFormat = new Date(userRecord.dateOfBirth);
-        betterDateOfBirthFormat = format(betterDateOfBirthFormat, 'dd/MM/yyyy');
-    }
-
-    let betterMembershipStartFormat = "NA";
-    if ('membershipStart' in userRecord && userRecord.membershipStart !== null) {
-        betterMembershipStartFormat = new Date(userRecord.membershipStart);
-        betterMembershipStartFormat = format(betterMembershipStartFormat, 'dd/MM/yyyy');
-    }
+    const betterDateOfBirthFormat = format(new Date(userRecord.dateOfBirth), 'dd/MM/yyyy');
+    const betterMembershipStartFormat = format(new Date(userRecord.membershipStart), 'dd/MM/yyyy');
 
     /* Simple function to help with the Edit To Do modal */
     function toggleModal() {
