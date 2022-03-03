@@ -4,6 +4,9 @@ This is a MERN stack user management application.
 
 Frontend based in React JS located in /client, whereas the backend is Node/Express located in /server.
 
+Currently, the users are populated in to the database using a seeder.
+The application will allow the user to amend user details and their membership type where required
+
 ## To run the application:
 
 ### Requires a local MongoDB installation and is running
