@@ -17,7 +17,7 @@ app.use(cors());
 app.use(routes);
 
 /** MongoDB connection settings **/
-const url = 'mongodb://127.0.0.1:27017/technical-test-flown';
+const url = 'mongodb://127.0.0.1:27017/MERN-User-Management-Project';
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
 
 mongoose

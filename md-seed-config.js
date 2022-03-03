@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Memberships = require('./server/seeders/memberships.seeder');
 const Users = require('./server/seeders/users.seeder');
 
-const mongoURL = 'mongodb://127.0.0.1:27017/technical-test-flown';
+const mongoURL = 'mongodb://127.0.0.1:27017/MERN-User-Management-Project';
 
 /**
  * Seeders List
