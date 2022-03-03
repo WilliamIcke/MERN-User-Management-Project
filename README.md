@@ -1,4 +1,4 @@
-# Flown Technical test - William Icke
+# MERN stack user management application
 
 This is a MERN stack user management application.
 
@@ -34,7 +34,7 @@ Then start up the backend server
  
 ## Available Scripts
 
-Execute the below scripts from the root ("Technical test flown project/"):
+Execute the below scripts from the root ("Technical test project/"):
 
 ### `npm start`
 
