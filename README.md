@@ -34,7 +34,7 @@ Then start up the backend server
  
 ## Available Scripts
 
-Execute the below scripts from the root ("Technical test project/"):
+Execute the below scripts from the root:
 
 ### `npm start`
 

@@ -40,8 +40,7 @@ const App = () => {
   return (
       <main className='App'>
         <div className='Card-Header'>
-            <h1>Technical test - William Icke</h1>
-            <h2>User management system</h2>
+            <h1>User management system</h1>
             <div className="statisticsListCard">
                 <h3>Membership statistics</h3>
                 {membershipRecords.map((membershipRecord) => (

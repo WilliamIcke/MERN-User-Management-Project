@@ -8,11 +8,8 @@ exports[`Component render snapshot test (debug) Check render app component 1`] =
     class="Card-Header"
   >
     <h1>
-      Technical test - William Icke
-    </h1>
-    <h2>
       User management system
-    </h2>
+    </h1>
     <div
       class="statisticsListCard"
     >
@@ -35,11 +32,8 @@ exports[`Component shallow snapshot tests (debug) Check App component, only 1`] 
     className="Card-Header"
   >
     <h1>
-      Technical test - William Icke
-    </h1>
-    <h2>
       User management system
-    </h2>
+    </h1>
     <div
       className="statisticsListCard"
     >
